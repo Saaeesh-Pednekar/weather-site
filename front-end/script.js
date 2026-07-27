@@ -40,13 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let submit = document.querySelector("#submit-city")
     let resultBox = document.querySelector("#weather-result")
 
-
+    // 🌟 Step 1: Automatically toggle between Local Testing and Live Render Backend
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://127.0.0.1:8000'
+        : 'https://weather-site.onrender.com';
 
 
     async function display_weather(place)
     {
         // 🌟 1. Route the network call directly to your Django backend port
-        let url = `http://localhost:8000/weather/api/forecast/?city=${place}`
+        // let url = `http://localhost:8000/weather/api/forecast/?city=${place}`
+        let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`
         resultBox.innerHTML = `<p>Fetching data for ${place}...</p>`
 
 
