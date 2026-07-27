@@ -49,9 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function display_weather(place)
     {
         // 🌟 1. Route the network call directly to your Django backend port
-        // let url = `http://localhost:8000/weather/api/forecast/?city=${place}`
-        // let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`
-        let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`;
+        let url = `${API_BASE_URL}/weather/api/forecast/?city=${encodeURIComponent(place)}`;
         // let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`;
         resultBox.innerHTML = `<p>Fetching data for ${place}...</p>`
 
