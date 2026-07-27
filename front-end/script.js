@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     //     ? 'http://127.0.0.1:8000'
     //     : 'https://weather-site.onrender.com';
-    const API_BASE_URL = 'https://weather-site.onrender.com'
+    const API_BASE_URL = 'https://weather-site-l2mm.onrender.com'
 
     async function display_weather(place)
     {
