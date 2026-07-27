@@ -5,7 +5,10 @@ FROM nginx:alpine
 COPY . /usr/share/nginx/html
 
 # Expose port 80 for web traffic
-EXPOSE 80
+# EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# # Start Nginx
+# CMD ["nginx", "-g", "daemon off;"]
+
+# Dynamic port binding for Render's infrastructure
+CMD ["sh", "-c", "sed -i 's/listen       80;/listen '\"$PORT\"';/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
