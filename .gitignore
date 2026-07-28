@@ -1,5 +1,4 @@
-*.mp4
-front-end/static/vid/
+
 
 back-end/db.sqlite3
 back-end/db.sqlite3-journal
