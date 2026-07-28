@@ -1,39 +1,3 @@
-// let city = document.querySelector("#city")
-// let submit = document.querySelector("#submit-city")
-
-// async function display_weather(place)
-// {
-//     let url = `https://goweather.xyz/v2/weather/${place}`
-//     try
-//     {
-//         let data = await fetch(url)
-//         let weather_data = data.json()
-//         console.log(weather_data)
-        
-//     }
-//     catch (error)
-//     {
-//         console.log("Unable to fetch the weather data")
-//     }
-// }
-
-// function select_city()
-// {
-//     place = city.value
-//     place = place.trim()
-//     place = place.charAt(0).toUpperCase() + place.slice(1).toLowerCase()
-//     console.log(place)
-//     display_weather(place)
-// }
-
-// submit.addEventListener("click" , select_city)
-// city.addEventListener("keydown", (event)=>{
-//     if (event.key === "Enter")
-//     {
-//         select_city()
-//     }
-// })
-
 document.addEventListener("DOMContentLoaded", () => {
 
     let city = document.querySelector("#city")
@@ -42,15 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🌟 Step 1: Automatically toggle between Local Testing and Live Render Backend
     // const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    //     ? 'http://127.0.0.1:8000'
+        // ? 'http://127.0.0.1:8000'
     //     : 'https://weather-site.onrender.com';
-    const API_BASE_URL = 'https://weather-site-l2mm.onrender.com'
+    const API_BASE_URL = 'https://weather-site-backend.onrender.com'
 
     async function display_weather(place)
     {
         // 🌟 1. Route the network call directly to your Django backend port
-        // let url = `${API_BASE_URL}/weather/api/forecast/?city=${encodeURIComponent(place)}`;
-        let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`;
+        let url = `${API_BASE_URL}/weather/api/forecast/?city=${encodeURIComponent(place)}`;
+        // let url = `${API_BASE_URL}/weather/api/forecast/?city=${place}`;
         resultBox.innerHTML = `<p>Fetching data for ${place}...</p>`
 
 
