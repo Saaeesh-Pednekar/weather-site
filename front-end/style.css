@@ -121,13 +121,13 @@
     }
 
     #city {
-        width: 65vw;
+        width: 55vw;
         height: 45px; /* Fixed mobile height */
         padding: 0 15px;
     }
 
     #submit-city {
-        width: 35vw;
+        width: 25vw;
         height: 45px; /* Fixed mobile height */
         font-size: 0.8rem;
     }
