@@ -17,18 +17,19 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: -1; /* Pushes the entire wrapper behind webpage content */
+  z-index: -1;
 }
 
 #bg-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Forces video to behave like background-size: cover */
+  object-fit: cover;
 }
 
+/* FIXED: Replaced unstable vh heights with solid pixel defaults */
 #city{
-    padding: 3%;
-    height: 7vh;
+    padding: 0 20px; 
+    height: 50px; 
     width: 30vw;
     border: 0px;
     border-radius: 25px;
@@ -38,12 +39,14 @@
     outline: none;
 }
 
+/* FIXED: Replaced unstable vh heights with solid pixel defaults */
 #submit-city{
     background-color: rgb(167, 229, 167);
     border-radius: 25px;
-    height: 7vh;
+    height: 50px;
     width: 7vw;
     font-size: 0.9rem;
+    cursor: pointer; /* Added for better desktop UX */
 }
 
 #ctr-flexbox{
@@ -54,15 +57,10 @@
     height: 100vh;
     justify-content: flex-start;
     gap: 15%;
-
-    /* position: relative;
-    z-index: 1;  */
 }
 
 .ctr-flex-div{
     align-self: center;
-    /* gap: 10px; */
-    /* border: 1px solid yellow; */
 }
 
 #weather-result {
@@ -70,76 +68,82 @@
     font-family: monospace;
     font-size: 1.5rem;
     text-align: center;
-    background: rgba(133, 114, 114, 0.4); /* Creates a subtle dark glass blur background */
+    background: rgba(133, 114, 114, 0.4);
     padding: 20px 40px;
     border-radius: 15px;
     backdrop-filter: blur(5px);
 }
 
-/* Optional styling to make data points look cleaner */
 #weather-result h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     color: rgb(167, 229, 167);
 }
 
-/* 1. TABLET PORTRAIT MODE (Screens smaller than 768px wide) */
-@media screen and (max-width: 768px) and (orientation: portrait) {
+
+/* ==========================================
+   OPTIMISED RESPONSIVE STYLES
+   ========================================== */
+
+/* 1. TABLET PORTRAIT MODE (Covers standard iPads and mid-size screens up to 992px) */
+@media screen and (max-width: 992px) and (orientation: portrait) {
     #website-title {
-        font-size: 2.5rem; /* Slightly smaller text for balance */
+        font-size: 2.5rem;
         text-align: center;
     }
 
     #city {
-        width: 60vw; /* Widens input bar so text fits nicely */
-        padding: 4%;
+        width: 55vw;
+        height: 48px; /* Fixed height protects layout from keyboard popup */
     }
 
     #submit-city {
-        width: 15vw; /* Widens button for easier tapping */
+        width: 15vw;
+        height: 48px;
     }
 
     #ctr-flexbox {
-        padding-top: 15%; /* Drops content down to prevent crowding */
-        gap: 10%; /* Reduces gaps to prevent elements from spilling off screen */
+        padding-top: 15%;
+        gap: 10%;
     }
 
     #weather-result {
-        width: 80vw; /* Keeps the information card contained inside screen margins */
+        width: 75vw;
     }
 }
 
-/* 2. MOBILE PHONE PORTRAIT MODE (Screens smaller than 480px wide) */
-@media screen and (max-width: 480px) and (orientation: portrait) {
+/* 2. MOBILE PHONE PORTRAIT MODE (Widened to 576px to catch modern large smartphones) */
+@media screen and (max-width: 576px) and (orientation: portrait) {
     #website-title {
-        font-size: 2rem; /* Clean typography fit for small mobile displays */
+        font-size: 2rem;
         text-align: center;
+        padding: 0 10px; /* Prevents long titles from hitting screen edges */
     }
 
     #city {
-        width: 70vw; /* Maximum width for standard thumb typing space */
-        height: 6vh;
-        padding: 5%;
+        width: 65vw;
+        height: 45px; /* Fixed mobile height */
+        padding: 0 15px;
     }
 
     #submit-city {
-        width: 20vw; /* Comfortable touch target size for fingers */
-        height: 6vh;
+        width: 22vw;
+        height: 45px; /* Fixed mobile height */
         font-size: 0.8rem;
     }
 
     #ctr-flexbox {
-        padding-top: 25%; /* Lowers text below notch / status bars */
+        padding-top: 20%;
         gap: 8%;
     }
 
     #weather-result {
-        width: 90vw; /* Stretches the glass card to fill small displays beautifully */
-        font-size: 1.2rem; /* Shrinks textual results slightly for tight areas */
-        padding: 15px 20px;
+        width: 90vw;
+        font-size: 1.1rem;
+        padding: 20px 15px;
     }
 
     #weather-result h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
