@@ -6,7 +6,7 @@ A full-stack weather application that enables users to search for real-time weat
 
 ## 🚀 Live Demo
 
-🔗 https://your-render-url.onrender.com
+🔗 https://weather-site-app.onrender.com
 
 ---
 
