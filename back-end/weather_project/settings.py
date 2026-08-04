@@ -132,22 +132,18 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# CORS_ALLOWED_ORIGINS = [
-#      "https://weather-site-app.vercel.app",
-#      "https://weather-site-app.onrender.com",  # 👈 Your FRONTEND Render URL (No trailing slash)
-#      "http://localhost:8080",                  # Common localdocker testing port
-#      "http://localhost:80",                    # Standard local Nginx port
-#      "http://127.0.0.1:8080",
-#      "http://127.0.0.1:80",
-#      # "http://localhost:8080",                  # Common local docker testing port
-#      # "http://localhost:80",                    # Standard local Nginx port
-#      # "http://127.0.0.1:8080",
-#      # "http://127.0.0.1:80",
-#  ]
-
-# settings.py (Temporary Testing Only)
-CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+     "https://weather-site-app.vercel.app",
+     "https://weather-site-app.onrender.com",  # 👈 Your FRONTEND Render URL (No trailing slash)
+     "http://localhost:8080",                  # Common localdocker testing port
+     "http://localhost:80",                    # Standard local Nginx port
+     "http://127.0.0.1:8080",
+     "http://127.0.0.1:80",
+     # "http://localhost:8080",                  # Common local docker testing port
+     # "http://localhost:80",                    # Standard local Nginx port
+     # "http://127.0.0.1:8080",
+     # "http://127.0.0.1:80",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5500",
@@ -156,29 +152,3 @@ CSRF_TRUSTED_ORIGINS = [
     "https://weather-site-backend.onrender.com",
 
 ]
-
-
-# settings.py
-
-# Keep your existing CORS_ALLOWED_ORIGINS array, and add this right below it:
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://.*\.vercel\.app$",
-]
-
-# settings.py
-
-# Allow standard browser headers to pass through
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "accept-encoding",
-    "authorization",
-    "content-type",
-    "dnt",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-]
-
-# If your frontend needs to handle cookies or sessions later
-CORS_ALLOW_CREDENTIALS = True
