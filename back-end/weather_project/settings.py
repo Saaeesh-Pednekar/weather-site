@@ -144,3 +144,29 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5500",
     "https://weather-site-app.vercel.app",  # Your actual live Vercel URL
 ]
+
+
+# settings.py
+
+# Keep your existing CORS_ALLOWED_ORIGINS array, and add this right below it:
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+]
+
+# settings.py
+
+# Allow standard browser headers to pass through
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+# If your frontend needs to handle cookies or sessions later
+CORS_ALLOW_CREDENTIALS = True
