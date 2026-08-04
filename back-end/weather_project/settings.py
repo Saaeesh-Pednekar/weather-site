@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-_kv8lxrvhbmryw8_2ev7+6huhy=x$rru)syqh5w6a_$07+acbf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
+ALLOWED_HOSTS = [
+    'weather-site-backend.onrender.com',  # Your exact live backend URL string
+    '.onrender.com', 
+    'localhost', 
+    '127.0.0.1'
+]
 
 # Application definition
 
@@ -147,6 +153,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "https://weather-site-app.vercel.app",  # Your actual live Vercel URL
+    "https://weather-site-backend.onrender.com",
+
 ]
 
 
