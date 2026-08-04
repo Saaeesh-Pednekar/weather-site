@@ -138,3 +138,9 @@ CORS_ALLOWED_ORIGINS = [
      # "http://127.0.0.1:8080",
      # "http://127.0.0.1:80",
  ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+    "https://weather-site-app.vercel.app",  # Your actual live Vercel URL
+]
