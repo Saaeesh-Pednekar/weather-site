@@ -95,10 +95,10 @@ The application is fully containerized using **Docker** and **Docker Compose**, 
 The project follows a multi-container architecture.
 
 ```
-+--------------------+
-| Docker Compose     |
-+---------+----------+
-          |
+   +-------------------+
+   |  Docker Compose   |
+   +--------+----------+
+            |
    ---------------------
    |                   |
    |                   |
