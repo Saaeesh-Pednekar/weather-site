@@ -82,12 +82,14 @@ WSGI_APPLICATION = 'weather_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {}
 
 
 # Password validation
@@ -139,10 +141,6 @@ CORS_ALLOWED_ORIGINS = [
      "http://localhost:80",                    # Standard local Nginx port
      "http://127.0.0.1:8080",
      "http://127.0.0.1:80",
-     # "http://localhost:8080",                  # Common local docker testing port
-     # "http://localhost:80",                    # Standard local Nginx port
-     # "http://127.0.0.1:8080",
-     # "http://127.0.0.1:80",
 ]
 
 CSRF_TRUSTED_ORIGINS = [

@@ -22,6 +22,8 @@ services:
       - ./front-end:/usr/share/nginx/html 
     ports:
       - "80:80"            # Opens your website on http://localhost
+    environment:
+      - PORT=80
     networks:
       - weather-net
 

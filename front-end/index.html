@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,56 @@
         </div>
         <div id="ctr-flexbox-2" class="ctr-flex-div">
             <input id="city" type="text"></input>
+            <input id="submit-city" type="submit" value="Search">
+        </div>
+        <div id="weather-result" class="ctr-flex-div">
+            JavaScript will inject content here dynamically 
+            <strong>Get Weather Reports Here...</strong>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Essential Meta Tags -->
+    <title>Get City Weather - Real-Time Global Weather Reports</title>
+    <meta name="description" content="Get instant, accurate real-time weather reports for any city worldwide. Search your city to check current temperature, wind speed, and atmospheric conditions.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags (For Social Sharing SEO) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Get City Weather - Real-Time Global Weather Reports">
+    <meta property="og:description" content="Get instant, accurate real-time weather reports for any city worldwide.">
+    <meta property="og:image" content="static/img/weather-og-preview.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get City Weather - Real-Time Global Weather Reports">
+    <meta name="twitter:description" content="Get instant, accurate real-time weather reports for any city worldwide.">
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="video-bg-wrapper">
+        <!-- SEO Tip: Muted video needs an aria-hidden attribute so screen readers ignore background noise -->
+        <video autoplay muted loop playsinline id="bg-video" aria-hidden="true">
+            <source src="static/vid/weather-background-video3.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="ctr-flexbox">
+        <div id="ctr-flexbox-1" class="ctr-flex-div">
+            <h1 id="website-title">GET CITY WEATHER</h1>
+        </div>
+        <div id="ctr-flexbox-2" class="ctr-flex-div">
+            <!-- SEO Tip: Screen readers and crawlers need labels for inputs to understand form context -->
+            <label for="city" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Enter City Name</label>
+            <input id="city" type="text" placeholder="e.g., London, New York" aria-label="Enter City Name"></input>
             <input id="submit-city" type="submit" value="Search">
         </div>
         <div id="weather-result" class="ctr-flex-div">
