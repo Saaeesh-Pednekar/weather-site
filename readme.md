@@ -1,5 +1,7 @@
 # 🌦️ Weather Analytics Platform
 
+![Weather data app](/front-end/static/readme_img/image.png)
+
 A full-stack weather application that allows users to search for real-time weather information by city name. The frontend is built using **HTML, CSS, and JavaScript** and is deployed on **Vercel** for fast global content delivery through its CDN. The backend is developed with **Django** and deployed on **Render**, where it securely communicates with a third-party Weather API to fetch live weather data.
 
 The application is fully containerized using **Docker** and **Docker Compose**, ensuring a consistent development environment and simplified deployment workflow.
