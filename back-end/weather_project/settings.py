@@ -136,9 +136,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
      "https://weather-site-app.vercel.app",
-     "https://weather-site-app.onrender.com",  # 👈 Your FRONTEND Render URL (No trailing slash) 
+     "https://weather-site-app.onrender.com",  # 👈 Your FRONTEND Render URL (No trailing slash)
      "http://localhost",                       # Standard local Nginx port
-     "http://127.0.0.1:80",                    # Common localdocker testing port
+     "http://127.0.0.1",                       # Common localdocker testing port
 ]
 
 CSRF_TRUSTED_ORIGINS = [
